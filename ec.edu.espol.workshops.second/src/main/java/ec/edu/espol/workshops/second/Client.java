@@ -11,4 +11,25 @@ public class Client {
 		this.sex=sex;
 		this.maritalStatus=maritalStatus;
 	}
+	
+	public int getAge() {​​
+
+		 return age;
+
+		 }​​
+​​
+
+		public char getSex() {​​
+
+		 return sex;
+
+		 }​​
+​​
+
+		public boolean isMaritalStatus() {​​
+
+		 return maritalStatus;
+
+		 }​​
+​​
 }
