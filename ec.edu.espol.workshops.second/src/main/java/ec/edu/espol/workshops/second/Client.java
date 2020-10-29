@@ -4,14 +4,21 @@ public class Client {
 	private int age;
 	private char sex;
 	private boolean maritalStatus; 
+	private String licencia;
 	
-	public Client(int age,char sex,boolean maritalStatus) 
+	public Client(int age,char sex,boolean maritalStatus,String licencia) 
 	{
 		this.age=age;
 		this.sex=sex;
 		this.maritalStatus=maritalStatus;
+		this.licencia=licencia;
 	}
 	
+	public String getLicencia() {
+
+		 return licencia;
+
+		 }
 	public int getAge() {
 
 		 return age;
