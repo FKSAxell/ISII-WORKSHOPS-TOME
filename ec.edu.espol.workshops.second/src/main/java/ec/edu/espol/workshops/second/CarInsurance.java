@@ -10,10 +10,11 @@ public class CarInsurance {
    * @param args String
    */
   public static void main(String[] args) {
-    System.out.println("Calculate your BASE PREMIUM");
-    Client client = new Client(28,'m', true,"A");
+   
+    Client client = new Client(81,'f', false,"A");
+    //System.out.println("Calculate your BASE PREMIUM");
     if(client.getAge()>80 || !valido) {
-      System.out.println("No es posible vender");
+      System.out.println("It is not possible to sell");
       System.out.println(-1);
       System.exit(0);
   }
@@ -48,7 +49,7 @@ public class CarInsurance {
       checkCase3(age_client);
   }
 	
-  private static void checkCase3(int edad) {
+  public static void checkCase3(int edad) {
     if ((edad>=45)&&(edad<65)) {
       BASEPREMIUM -= 100;
       aprobado=true;
