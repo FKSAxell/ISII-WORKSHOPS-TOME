@@ -1,4 +1,4 @@
-Feature: Can calculate him the insurance premium?
+Feature: Can the company calculates the insurance premium?
 
  
 Scenario: The customer is over 80 years old
