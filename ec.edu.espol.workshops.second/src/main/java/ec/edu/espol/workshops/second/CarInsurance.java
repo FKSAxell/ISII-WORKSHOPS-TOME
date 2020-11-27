@@ -13,7 +13,7 @@ public class CarInsurance {
 	public static void main(String[] args) {
 
 		System.out.println("GET PREMIUM");
-		double num = getPremium(81, 'm', true);
+		double num = getPremium(25, 'm', false);
 		System.out.println(num);
 	}
 
@@ -52,8 +52,8 @@ public class CarInsurance {
 		switch (gender_client) {
 		case 'm':
 			calculateCase1(age_client, maritalStatus);
+			aprobado = true;
 			if (maritalStatus) {
-				aprobado = true;
 				BASEPREMIUM -= 200;
 			}
 			break;
@@ -75,7 +75,7 @@ public class CarInsurance {
 	}
 
 	private static void calculateCase1(int age, boolean status) {
-		if (age <= 25 && !(status)) {
+		if (age < 25 && !(status)) {
 			BASEPREMIUM += 1500;
 			aprobado = true;
 		}
