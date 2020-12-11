@@ -16,7 +16,7 @@ public class CarInsurance {
 		double num = getPremium(81, 'm', true);
 		System.out.println(num);
 	}
-
+ 
 	/**
 	 * method to get the premium
 	 * 
