@@ -26,7 +26,7 @@ public class CarInsurance {
 	 */
 
 	public static double getPremium(int edad, char genre, boolean maritalStatus) {
-		BASEPREMIUM= 600;
+		BASEPREMIUM= 600; 
 		Client client = new Client(edad, genre, maritalStatus, "A");
 		if (client.getAge() > 80 || !valido) {
 			return -1;
