@@ -20,8 +20,7 @@ public class CarInsurance {
 	/**
 	 * method to get the premium
 	 * 
-	 * 
-	 * 
+	 *
 	 * @param edad
 	 * @param genre
 	 * @return
