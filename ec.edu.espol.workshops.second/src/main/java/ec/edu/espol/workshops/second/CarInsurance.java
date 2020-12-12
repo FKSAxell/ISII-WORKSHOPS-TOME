@@ -1,7 +1,7 @@
 package ec.edu.espol.workshops.second;
 
 public class CarInsurance {
-	public static double BASEPREMIUM = 500;
+	public static double BASEPREMIUM = 600;
 	public static boolean valido = true;
 	public static boolean aprobado = false;
 
