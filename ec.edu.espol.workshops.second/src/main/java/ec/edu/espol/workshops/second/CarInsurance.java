@@ -49,6 +49,7 @@ public class CarInsurance {
 		int age_client = cliente.getAge();
 		char gender_client = cliente.getSex();
 		boolean maritalStatus = cliente.isMaritalStatus();
+		aprobado = true;
 		switch (gender_client) {
 		case 'm':
 			calculateCase1(age_client, maritalStatus);
@@ -75,7 +76,7 @@ public class CarInsurance {
 	}
 
 	private static void calculateCase1(int age, boolean status) {
-		if (age <= 25 && !(status)) {
+		if (age < 25 && !(status)) {
 			BASEPREMIUM += 1500;
 			aprobado = true;
 		}
