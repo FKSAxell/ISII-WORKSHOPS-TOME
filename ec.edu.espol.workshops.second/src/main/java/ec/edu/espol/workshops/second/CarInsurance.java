@@ -13,7 +13,8 @@ public class CarInsurance {
 	public static void main(String[] args) {
 
 		System.out.println("GET PREMIUM");
-		double num = getPremium(81, 'm', true);
+		System.out.println("GET PREMIUM");
+		double num = getPremium(79, 'm', true);
 		System.out.println(num);
 	}
 
@@ -28,10 +29,14 @@ public class CarInsurance {
 	public static double getPremium(int edad, char genre, boolean maritalStatus) {
 		BASEPREMIUM= 500;
 		Client client = new Client(edad, genre, maritalStatus, "A");
-		if (client.getAge() > 80 || !valido) {
+		if (client.getAge() < 18 || client.getAge() > 80 || !valido) {
 			return -1;
 		}
-
+		try {
+		       int num=client.getAge()/1;
+		} catch (NumberFormatException excepcion) {
+		        return -1;
+		}
 		calculatePremium(client);
 		if (!aprobado) {
 			return -1;
@@ -45,6 +50,7 @@ public class CarInsurance {
 		int age_client = cliente.getAge();
 		char gender_client = cliente.getSex();
 		boolean maritalStatus = cliente.isMaritalStatus();
+		aprobado = true;
 		switch (gender_client) {
 		case 'm':
 			calculateCase1(age_client, maritalStatus);
@@ -71,9 +77,13 @@ public class CarInsurance {
 	}
 
 	private static void calculateCase1(int age, boolean status) {
-		if (age <= 25 && !(status)) {
+		if (age < 25 && !(status)) {
 			BASEPREMIUM += 1500;
 			aprobado = true;
+		}
+		//New business rule
+		if(age>25 && age<45) {
+			BASEPREMIUM -= 100;
 		}
 	}
 }
